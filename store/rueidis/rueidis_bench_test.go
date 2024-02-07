@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/redis/rueidis"
-	lib_store "github.com/sdimon13/cache/lib/store"
+lib_store lib_store "cache/lib/store"
 )
 
 func BenchmarkRueidisSet(b *testing.B) {

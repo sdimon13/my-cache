@@ -5,9 +5,8 @@ import (
 
 	"github.com/vmihailenco/msgpack/v5"
 
-	"github.com/sdimon13/cache/lib/cache"
-
-	"github.com/sdimon13/cache/lib/store"
+	"cache/lib/cache"
+	"cache/lib/store"
 )
 
 // Marshaler is the struct that marshal and unmarshal cache values

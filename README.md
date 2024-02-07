@@ -1,6 +1,6 @@
-[![Test](https://github.com/sdimon13/cache/actions/workflows/all.yml/badge.svg?branch=master)](https://github.com/sdimon13/cache/actions/workflows/all.yml)
-[![GoDoc](https://godoc.org/github.com/sdimon13/cache?status.png)](https://godoc.org/github.com/sdimon13/cache)
-[![GoReportCard](https://goreportcard.com/badge/github.com/sdimon13/cache)](https://goreportcard.com/report/github.com/sdimon13/cache)
+[![Test](https://cache/actions/workflows/all.yml/badge.svg?branch=master)](https://cache/actions/workflows/all.yml)
+[![GoDoc](https://godoc.org/cache?status.png)](https://godoc.org/cache)
+[![GoReportCard](https://goreportcard.com/badge/cache)](https://goreportcard.com/report/cache)
 [![codecov](https://codecov.io/gh/sdimon13/cache/branch/master/graph/badge.svg)](https://codecov.io/gh/sdimon13/cache)
 
 Cache
@@ -44,30 +44,30 @@ Here is what it brings in detail:
 To begin working with the latest version of gocache, you can import the library in your project:
 
 ```go
-go get github.com/sdimon13/cache/lib/v1
+go get cache/lib/v1
 ```
 
 and then, import the store(s) you want to use between all available ones:
 
 ```go
-go get github.com/sdimon13/cache/store/bigcache/v4
-go get github.com/sdimon13/cache/store/freecache/v4
-go get github.com/sdimon13/cache/store/go_cache/v4
-go get github.com/sdimon13/cache/store/hazelcast/v4
-go get github.com/sdimon13/cache/store/memcache/v4
-go get github.com/sdimon13/cache/store/pegasus/v4
-go get github.com/sdimon13/cache/store/redis/v4
-go get github.com/sdimon13/cache/store/rediscluster/v4
-go get github.com/sdimon13/cache/store/rueidis/v4
-go get github.com/sdimon13/cache/store/ristretto/v4
+go get cache/store/bigcache/v4
+go get cache/store/freecache/v4
+go get cache/store/go_cache/v4
+go get cache/store/hazelcast/v4
+go get cache/store/memcache/v4
+go get cache/store/pegasus/v4
+go get cache/store/redis/v4
+go get cache/store/rediscluster/v4
+go get cache/store/rueidis/v4
+go get cache/store/ristretto/v4
 ```
 
 Then, simply use the following import statements:
 
 ```go
 import (
-	"github.com/sdimon13/cache/lib/cache"
-	"github.com/sdimon13/cache/store/redis/v1"
+	"cache/lib/cache"
+	"cache/store/redis/v1"
 )
 ```
 
@@ -122,9 +122,9 @@ value := cacheManager.Get(ctx, "my-key")
 ```go
 import (
 	"github.com/dgraph-io/ristretto"
-	"github.com/sdimon13/cache/lib/cache"
-	"github.com/sdimon13/cache/lib/store"
-	ristretto_store "github.com/sdimon13/cache/store/ristretto/v4"
+	"cache/lib/cache"
+	lib_store "cache/lib/store"
+	ristretto_store "cache/store/ristretto/v4"
 )
 ristrettoCache, err := ristretto.NewCache(&ristretto.Config{
 	NumCounters: 1000,
@@ -448,8 +448,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/sdimon13/cache/lib/cache"
-	"github.com/sdimon13/cache/lib/store"
+	"cache/lib/cache"
+	lib_store "cache/lib/store"
 	"github.com/redis/go-redis/v9"
 )
 

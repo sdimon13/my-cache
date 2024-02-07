@@ -4,9 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/sdimon13/cache/lib/store"
-
-	"github.com/sdimon13/cache/lib/codec"
+	"cache/lib/codec"
+	"cache/lib/store"
 )
 
 // CacheInterface represents the interface for all caches (aggregates, metric, memory, redis, ...)

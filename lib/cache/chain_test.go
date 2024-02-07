@@ -10,9 +10,8 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sdimon13/cache/lib/store"
-
-	"github.com/sdimon13/cache/lib/codec"
+	"cache/lib/codec"
+	"cache/lib/store"
 )
 
 func TestNewChain(t *testing.T) {

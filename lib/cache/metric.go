@@ -3,9 +3,9 @@ package cache
 import (
 	"context"
 
-	"github.com/sdimon13/cache/lib/metrics"
+	"cache/lib/metrics"
 
-	"github.com/sdimon13/cache/lib/store"
+	"cache/lib/store"
 )
 
 const (

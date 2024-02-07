@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-	redis "github.com/redis/go-redis/v9"
+	"github.com/redis/go-redis/v9"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/cache/lib/store"
+lib_store lib_store "cache/lib/store"
 )
 
 func TestNewRedis(t *testing.T) {

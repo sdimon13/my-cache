@@ -3,8 +3,6 @@ package cache
 import (
 	"context"
 	"sync"
-
-	"github.com/sdimon13/cache/lib/store"
 )
 
 const (

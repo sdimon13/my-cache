@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/sdimon13/cache/lib/store"
+	"cache/lib/store"
 )
 
 // CodecInterface represents an instance of a cache codec

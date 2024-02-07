@@ -10,7 +10,7 @@ import (
 	"github.com/patrickmn/go-cache"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/cache/lib/store"
+lib_store lib_store "cache/lib/store"
 )
 
 func TestNewGoCache(t *testing.T) {

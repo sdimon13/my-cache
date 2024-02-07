@@ -9,11 +9,10 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sdimon13/cache/lib/metrics"
+	"cache/lib/metrics"
+	"cache/lib/store"
 
-	"github.com/sdimon13/cache/lib/store"
-
-	"github.com/sdimon13/cache/lib/codec"
+	"cache/lib/codec"
 )
 
 func TestNewMetric(t *testing.T) {

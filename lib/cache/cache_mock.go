@@ -5,13 +5,12 @@
 package cache
 
 import (
+	codec "cache/lib/codec"
+	"cache/lib/store"
 	context "context"
+	gomock "github.com/golang/mock/gomock"
 	reflect "reflect"
 	time "time"
-
-	gomock "github.com/golang/mock/gomock"
-	codec "github.com/sdimon13/cache/lib/codec"
-	store "github.com/sdimon13/cache/lib/store"
 )
 
 // MockCacheInterface is a mock of CacheInterface interface.

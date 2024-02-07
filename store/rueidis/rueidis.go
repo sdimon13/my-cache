@@ -7,7 +7,7 @@ import (
 
 	"github.com/redis/rueidis"
 	"github.com/redis/rueidis/rueidiscompat"
-	lib_store "github.com/sdimon13/cache/lib/store"
+lib_store lib_store "cache/lib/store"
 )
 
 const (

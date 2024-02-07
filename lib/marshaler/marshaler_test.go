@@ -10,9 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/vmihailenco/msgpack/v5"
 
-	"github.com/sdimon13/cache/lib/cache"
-
-	"github.com/sdimon13/cache/lib/store"
+	"cache/lib/cache"
+	"cache/lib/store"
 )
 
 type testCacheValue struct {
