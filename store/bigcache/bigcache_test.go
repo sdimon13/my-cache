@@ -8,7 +8,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewBigcache(t *testing.T) {
@@ -33,7 +33,7 @@ func TestBigcacheGet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockBigcacheClientInterface(ctrl)
 	client.EXPECT().Get(cacheKey).Return(cacheValue, nil)
@@ -98,7 +98,7 @@ func TestBigcacheSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockBigcacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, cacheValue).Return(nil)
@@ -121,7 +121,7 @@ func TestBigcacheSetString(t *testing.T) {
 	cacheKey := "my-key"
 
 	// The value is string when failback from Redis
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockBigcacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, []byte(cacheValue)).Return(nil)
@@ -142,7 +142,7 @@ func TestBigcacheSetWhenError(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	expectedErr := errors.New("an unexpected error occurred")
 
@@ -165,7 +165,7 @@ func TestBigcacheSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockBigcacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, cacheValue).Return(nil)
@@ -188,7 +188,7 @@ func TestBigcacheSetWithTagsWhenAlreadyInserted(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockBigcacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, cacheValue).Return(nil)

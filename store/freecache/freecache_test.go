@@ -10,7 +10,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewFreecache(t *testing.T) {
@@ -104,7 +104,7 @@ func TestFreecacheGetWithTTL(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockFreecacheClientInterface(ctrl)
 	client.EXPECT().Get([]byte(cacheKey)).Return(cacheValue, nil)
@@ -150,7 +150,7 @@ func TestFreecacheGetWithTTLWhenErrorAtTTL(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockFreecacheClientInterface(ctrl)
 	client.EXPECT().Get([]byte(cacheKey)).Return(cacheValue, nil)
@@ -190,7 +190,7 @@ func TestFreecacheSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockFreecacheClientInterface(ctrl)
 	client.EXPECT().Set([]byte(cacheKey), cacheValue, 6).Return(nil)
@@ -207,7 +207,7 @@ func TestFreecacheSetWithDefaultOptions(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockFreecacheClientInterface(ctrl)
 	client.EXPECT().Set([]byte(cacheKey), cacheValue, 0).Return(nil)
@@ -224,7 +224,7 @@ func TestFreecacheSetInvalidValue(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 	expectedErr := errors.New("value type not supported by Freecache store")
 
 	client := NewMockFreecacheClientInterface(ctrl)
@@ -241,7 +241,7 @@ func TestFreecacheSetInvalidSize(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 	expectedErr := fmt.Errorf("size of key: %v, value: %v, err: %v", cacheKey, cacheValue, errors.New(""))
 	client := NewMockFreecacheClientInterface(ctrl)
 	client.EXPECT().Set([]byte(cacheKey), cacheValue, 6).Return(expectedErr)
@@ -258,7 +258,7 @@ func TestFreecacheSetInvalidKey(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := 1
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	expectedErr := errors.New("key type not supported by Freecache store")
 
@@ -323,7 +323,7 @@ func TestFreecacheSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockFreecacheClientInterface(ctrl)
 	client.EXPECT().Set([]byte(cacheKey), cacheValue, 6).Return(nil)
@@ -364,7 +364,7 @@ func TestFreecacheTagsAlreadyPresent(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	oldCacheKeys := []byte("key1,key2")
 
@@ -385,7 +385,7 @@ func TestFreecacheTagsRefreshTime(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	oldCacheKeys := []byte("my-key")
 

@@ -10,7 +10,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewMemcache(t *testing.T) {
@@ -35,7 +35,7 @@ func TestMemcacheGet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockMemcacheClientInterface(ctrl)
 	client.EXPECT().Get(cacheKey).Return(&memcache.Item{
@@ -82,7 +82,7 @@ func TestMemcacheGetWithTTL(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockMemcacheClientInterface(ctrl)
 	client.EXPECT().Get(cacheKey).Return(&memcache.Item{
@@ -154,7 +154,7 @@ func TestMemcacheSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockMemcacheClientInterface(ctrl)
 	client.EXPECT().Set(&memcache.Item{
@@ -179,7 +179,7 @@ func TestMemcacheSetWhenNoOptionsGiven(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockMemcacheClientInterface(ctrl)
 	client.EXPECT().Set(&memcache.Item{
@@ -204,7 +204,7 @@ func TestMemcacheSetWhenError(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	expectedErr := errors.New("an unexpected error occurred")
 
@@ -231,7 +231,7 @@ func TestMemcacheSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	tagKey := "gocache_tag_tag1"
 
@@ -260,7 +260,7 @@ func TestMemcacheSetWithTagsWhenAlreadyInserted(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockMemcacheClientInterface(ctrl)
 	client.EXPECT().Set(gomock.Any()).AnyTimes().Return(nil)

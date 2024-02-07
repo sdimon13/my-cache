@@ -123,7 +123,7 @@ value := cacheManager.Get(ctx, "my-key")
 import (
 	"github.com/dgraph-io/ristretto"
 	"cache/lib/cache"
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 	ristretto_store "cache/store/ristretto/v4"
 )
 ristrettoCache, err := ristretto.NewCache(&ristretto.Config{
@@ -449,7 +449,7 @@ import (
 	"time"
 
 	"cache/lib/cache"
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 	"github.com/redis/go-redis/v9"
 )
 

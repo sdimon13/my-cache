@@ -11,7 +11,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewRueidis(t *testing.T) {
@@ -77,7 +77,7 @@ func TestRueidisSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	// rueidis mock client
 	client := mock.NewClient(ctrl)
@@ -99,7 +99,7 @@ func TestRueidisSetWhenNoOptionsGiven(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := mock.NewClient(ctrl)
 	client.EXPECT().Do(ctx, mock.Match("SET", cacheKey, cacheValue, "EX", "6")).Return(mock.Result(mock.RedisString("")))
@@ -120,7 +120,7 @@ func TestRedisSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := mock.NewClient(ctrl)
 	client.EXPECT().Do(ctx, mock.Match("SET", cacheKey, cacheValue, "EX", "10")).Return(mock.Result(mock.RedisString("")))

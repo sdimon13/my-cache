@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sdimon13/my-cache/lib/store"
+	"github.com/sdimon13/test-cache/lib/store"
 )
 
 // BigcacheClientInterface represents a allegro/bigcache client

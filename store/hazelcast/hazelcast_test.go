@@ -8,7 +8,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewHazelcast(t *testing.T) {
@@ -50,7 +50,7 @@ func TestHazelcastSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	hzMap := NewMockHazelcastMapInterface(ctrl)
 	hzMap.EXPECT().SetWithTTL(ctx, cacheKey, cacheValue, 5*time.Second).Return(nil)
@@ -71,7 +71,7 @@ func TestHazelcastSetWhenNoOptionsGiven(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	hzMap := NewMockHazelcastMapInterface(ctrl)
 	hzMap.EXPECT().SetWithTTL(ctx, cacheKey, cacheValue, 6*time.Second).Return(nil)
@@ -92,7 +92,7 @@ func TestHazelcastSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	hzMap := NewMockHazelcastMapInterface(ctrl)
 	hzMap.EXPECT().SetWithTTL(ctx, cacheKey, cacheValue, time.Duration(0)).Return(nil)

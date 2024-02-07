@@ -9,7 +9,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewRistretto(t *testing.T) {
@@ -34,7 +34,7 @@ func TestRistrettoGet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().Get(cacheKey).Return(cacheValue, true)
@@ -77,7 +77,7 @@ func TestRistrettoGetWithTTL(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().Get(cacheKey).Return(cacheValue, true)
@@ -122,7 +122,7 @@ func TestRistrettoSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().SetWithTTL(cacheKey, cacheValue, int64(4), 0*time.Second).Return(true)
@@ -143,7 +143,7 @@ func TestRistrettoSetWhenNoOptionsGiven(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().SetWithTTL(cacheKey, cacheValue, int64(7), 0*time.Second).Return(true)
@@ -164,7 +164,7 @@ func TestRistrettoSetWhenError(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().SetWithTTL(cacheKey, cacheValue, int64(7), 0*time.Second).Return(false)
@@ -185,7 +185,7 @@ func TestRistrettoSetWithSynchronousSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().SetWithTTL(cacheKey, cacheValue, int64(7), 0*time.Second).Return(true)
@@ -207,7 +207,7 @@ func TestRistrettoSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().SetWithTTL(cacheKey, cacheValue, int64(0), 0*time.Second).Return(true)
@@ -230,7 +230,7 @@ func TestRistrettoSetWithTagsWhenAlreadyInserted(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockRistrettoClientInterface(ctrl)
 	client.EXPECT().SetWithTTL(cacheKey, cacheValue, int64(0), 0*time.Second).Return(true)

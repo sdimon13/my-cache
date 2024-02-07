@@ -10,7 +10,7 @@ import (
 	"github.com/patrickmn/go-cache"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewGoCache(t *testing.T) {
@@ -34,7 +34,7 @@ func TestGoCacheGet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockGoCacheClientInterface(ctrl)
 	client.EXPECT().Get(cacheKey).Return(cacheValue, true)
@@ -77,7 +77,7 @@ func TestGoCacheGetWithTTL(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockGoCacheClientInterface(ctrl)
 	client.EXPECT().GetWithExpiration(cacheKey).Return(cacheValue, time.Now(), true)
@@ -122,7 +122,7 @@ func TestGoCacheSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockGoCacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, cacheValue, 0*time.Second)
@@ -143,7 +143,7 @@ func TestGoCacheSetWhenNoOptionsGiven(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockGoCacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, cacheValue, 0*time.Second)
@@ -164,7 +164,7 @@ func TestGoCacheSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockGoCacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, cacheValue, 0*time.Second)
@@ -188,7 +188,7 @@ func TestGoCacheSetWithTagsWhenAlreadyInserted(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := []byte("my-cache-value")
+	cacheValue := []byte("test-cache-value")
 
 	client := NewMockGoCacheClientInterface(ctrl)
 	client.EXPECT().Set(cacheKey, cacheValue, 0*time.Second)

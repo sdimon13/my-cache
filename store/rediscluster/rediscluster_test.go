@@ -9,7 +9,7 @@ import (
 	"github.com/redis/go-redis/v9"
 	"github.com/stretchr/testify/assert"
 
-	lib_store "github.com/sdimon13/my-cache/lib/store"
+	lib_store "github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNewRedisCluster(t *testing.T) {
@@ -53,7 +53,7 @@ func TestRedisClusterSet(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRedisClusterClientInterface(ctrl)
 	client.EXPECT().Set(ctx, "my-key", cacheValue, 5*time.Second).Return(&redis.StatusCmd{})
@@ -74,7 +74,7 @@ func TestRedisClusterSetWhenNoOptionsGiven(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRedisClusterClientInterface(ctrl)
 	client.EXPECT().Set(ctx, "my-key", cacheValue, 6*time.Second).Return(&redis.StatusCmd{})
@@ -95,7 +95,7 @@ func TestRedisClusterSetWithTags(t *testing.T) {
 	ctx := context.Background()
 
 	cacheKey := "my-key"
-	cacheValue := "my-cache-value"
+	cacheValue := "test-cache-value"
 
 	client := NewMockRedisClusterClientInterface(ctrl)
 	client.EXPECT().Set(ctx, cacheKey, cacheValue, time.Duration(0)).Return(&redis.StatusCmd{})

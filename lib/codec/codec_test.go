@@ -9,7 +9,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sdimon13/my-cache/lib/store"
+	"github.com/sdimon13/test-cache/lib/store"
 )
 
 func TestNew(t *testing.T) {
