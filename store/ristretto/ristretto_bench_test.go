@@ -8,7 +8,7 @@ import (
 
 	"github.com/dgraph-io/ristretto"
 
-	lib_store "github.com/sdimon13/cache/lib/store"
+	lib_store "github.com/sdimon13/my-cache/lib/store"
 )
 
 func BenchmarkRistrettoSet(b *testing.B) {

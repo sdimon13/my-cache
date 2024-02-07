@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/sdimon13/cache/lib/store"
+	"github.com/sdimon13/my-cache/lib/store"
 
-	"github.com/sdimon13/cache/lib/codec"
+	"github.com/sdimon13/my-cache/lib/codec"
 )
 
 const (

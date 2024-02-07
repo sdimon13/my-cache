@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/sdimon13/cache/lib/store"
+	"github.com/sdimon13/my-cache/lib/store"
 )
 
 // Stats allows to returns some statistics of codec usage

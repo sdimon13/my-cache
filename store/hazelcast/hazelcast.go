@@ -11,7 +11,7 @@ import (
 	"github.com/hazelcast/hazelcast-go-client/types"
 	"golang.org/x/sync/errgroup"
 
-	lib_store "github.com/sdimon13/cache/lib/store"
+	lib_store "github.com/sdimon13/my-cache/lib/store"
 )
 
 // HazelcastMapInterface represents a hazelcast/hazelcast-go-client map

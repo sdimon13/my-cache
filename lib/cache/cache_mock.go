@@ -7,8 +7,8 @@ package cache
 import (
 	context "context"
 	gomock "github.com/golang/mock/gomock"
-	codec "github.com/sdimon13/cache/lib/codec"
-	"github.com/sdimon13/cache/lib/store"
+	codec "github.com/sdimon13/my-cache/lib/codec"
+	"github.com/sdimon13/my-cache/lib/store"
 	reflect "reflect"
 	time "time"
 )

@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/sdimon13/cache/lib/store"
+	"github.com/sdimon13/my-cache/lib/store"
 )
 
 const (

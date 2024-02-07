@@ -8,7 +8,7 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	codec "github.com/sdimon13/cache/lib/codec"
+	codec "github.com/sdimon13/my-cache/lib/codec"
 )
 
 // MockMetricsInterface is a mock of MetricsInterface interface.
