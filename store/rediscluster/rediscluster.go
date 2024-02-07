@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
+	lib_store "cache/lib/store"
 	"github.com/redis/go-redis/v9"
-lib_store lib_store "cache/lib/store"
 )
 
 // RedisClusterClientInterface represents a go-redis/redis clusclient

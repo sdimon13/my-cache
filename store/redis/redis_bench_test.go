@@ -7,7 +7,8 @@ import (
 	"testing"
 
 	"github.com/redis/go-redis/v9"
-lib_store lib_store "cache/lib/store"
+
+	lib_store "cache/lib/store"
 )
 
 func BenchmarkRedisSet(b *testing.B) {

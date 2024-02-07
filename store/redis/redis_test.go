@@ -9,7 +9,7 @@ import (
 	"github.com/redis/go-redis/v9"
 	"github.com/stretchr/testify/assert"
 
-lib_store lib_store "cache/lib/store"
+	lib_store "cache/lib/store"
 )
 
 func TestNewRedis(t *testing.T) {

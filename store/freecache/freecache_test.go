@@ -8,8 +8,9 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-lib_store lib_store "cache/lib/store"
-"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/assert"
+
+	lib_store "cache/lib/store"
 )
 
 func TestNewFreecache(t *testing.T) {

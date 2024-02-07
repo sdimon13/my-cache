@@ -9,7 +9,7 @@ import (
 
 	"github.com/coocood/freecache"
 
-lib_store lib_store "cache/lib/store"
+	lib_store "cache/lib/store"
 )
 
 func BenchmarkFreecacheSet(b *testing.B) {

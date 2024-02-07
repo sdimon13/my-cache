@@ -9,7 +9,7 @@ import (
 
 	"github.com/allegro/bigcache/v3"
 
-lib_store lib_store "cache/lib/store"
+	lib_store "cache/lib/store"
 )
 
 func BenchmarkBigcacheSet(b *testing.B) {

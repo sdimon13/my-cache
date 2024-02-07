@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
+	lib_store "cache/lib/store"
 	"github.com/redis/rueidis"
 	"github.com/redis/rueidis/rueidiscompat"
-lib_store lib_store "cache/lib/store"
 )
 
 const (

@@ -9,7 +9,7 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/spf13/cast"
 
-lib_store lib_store "cache/lib/store"
+	lib_store "cache/lib/store"
 )
 
 // run go test -run='TestPegasus*' -race -cover -coverprofile=coverage.txt -covermode=atomic -v ./...

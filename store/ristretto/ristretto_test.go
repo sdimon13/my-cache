@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
+	lib_store "cache/lib/store"
 	"github.com/golang/mock/gomock"
-lib_store lib_store "cache/lib/store"
-"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewRistretto(t *testing.T) {

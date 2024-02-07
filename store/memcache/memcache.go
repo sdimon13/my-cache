@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-lib_store lib_store "cache/lib/store"
-"golang.org/x/sync/errgroup"
+	lib_store "cache/lib/store"
+	"golang.org/x/sync/errgroup"
 
-"github.com/bradfitz/gomemcache/memcache"
+	"github.com/bradfitz/gomemcache/memcache"
 )
 
 // MemcacheClientInterface represents a bradfitz/gomemcache client

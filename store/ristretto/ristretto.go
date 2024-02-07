@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-lib_store lib_store "cache/lib/store"
+	lib_store "cache/lib/store"
 )
 
 const (
