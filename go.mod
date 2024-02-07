@@ -1,4 +1,4 @@
-module github.com/sdimon13/cache
+module github.com/sdimon13/my-cache
 
 go 1.22
 
