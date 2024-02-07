@@ -7,8 +7,9 @@ import (
 	"testing"
 	"time"
 
-	lib_store "cache/lib/store"
 	"github.com/bradfitz/gomemcache/memcache"
+
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 func BenchmarkMemcacheSet(b *testing.B) {

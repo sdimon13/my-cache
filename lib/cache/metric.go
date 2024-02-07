@@ -5,7 +5,7 @@ import (
 
 	"cache/lib/metrics"
 
-	"cache/lib/store"
+	"github.com/sdimon13/cache/lib/store"
 )
 
 const (

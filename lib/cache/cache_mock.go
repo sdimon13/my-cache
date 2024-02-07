@@ -5,10 +5,10 @@
 package cache
 
 import (
-	codec "cache/lib/codec"
-	"cache/lib/store"
 	context "context"
 	gomock "github.com/golang/mock/gomock"
+	codec "github.com/sdimon13/cache/lib/codec"
+	"github.com/sdimon13/cache/lib/store"
 	reflect "reflect"
 	time "time"
 )

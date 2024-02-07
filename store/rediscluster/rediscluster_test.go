@@ -5,10 +5,11 @@ import (
 	"testing"
 	"time"
 
-	lib_store "cache/lib/store"
 	"github.com/golang/mock/gomock"
 	"github.com/redis/go-redis/v9"
 	"github.com/stretchr/testify/assert"
+
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 func TestNewRedisCluster(t *testing.T) {

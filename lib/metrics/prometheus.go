@@ -3,7 +3,7 @@ package metrics
 import (
 	"github.com/prometheus/client_golang/prometheus"
 
-	"cache/lib/codec"
+	"github.com/sdimon13/cache/lib/codec"
 )
 
 const (

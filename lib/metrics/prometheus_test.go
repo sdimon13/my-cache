@@ -9,8 +9,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/stretchr/testify/assert"
 
-	"cache/lib/codec"
-	"cache/lib/store"
+	"github.com/sdimon13/cache/lib/store"
+
+	"github.com/sdimon13/cache/lib/codec"
 )
 
 func TestNewPrometheus(t *testing.T) {

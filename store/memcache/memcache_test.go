@@ -6,10 +6,11 @@ import (
 	"testing"
 	"time"
 
-	lib_store "cache/lib/store"
 	"github.com/bradfitz/gomemcache/memcache"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
+
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 func TestNewMemcache(t *testing.T) {

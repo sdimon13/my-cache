@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"cache/lib/store"
+	"github.com/sdimon13/cache/lib/store"
 )
 
 const (

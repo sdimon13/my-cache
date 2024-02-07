@@ -10,9 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"cache/lib/metrics"
-	"cache/lib/store"
 
-	"cache/lib/codec"
+	"github.com/sdimon13/cache/lib/store"
+
+	"github.com/sdimon13/cache/lib/codec"
 )
 
 func TestNewMetric(t *testing.T) {
