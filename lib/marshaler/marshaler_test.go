@@ -7,9 +7,10 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-	"github.com/sdimon13/cache/lib/v1/cache"
 	"github.com/stretchr/testify/assert"
 	"github.com/vmihailenco/msgpack/v5"
+
+	"github.com/sdimon13/cache/lib/cache"
 
 	"github.com/sdimon13/cache/lib/store"
 )

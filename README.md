@@ -66,7 +66,7 @@ Then, simply use the following import statements:
 
 ```go
 import (
-	"github.com/sdimon13/cache/lib/v1/cache"
+	"github.com/sdimon13/cache/lib/cache"
 	"github.com/sdimon13/cache/store/redis/v1"
 )
 ```
@@ -122,7 +122,7 @@ value := cacheManager.Get(ctx, "my-key")
 ```go
 import (
 	"github.com/dgraph-io/ristretto"
-	"github.com/sdimon13/cache/lib/v1/cache"
+	"github.com/sdimon13/cache/lib/cache"
 	"github.com/sdimon13/cache/lib/store"
 	ristretto_store "github.com/sdimon13/cache/store/ristretto/v4"
 )
@@ -448,7 +448,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/sdimon13/cache/lib/v1/cache"
+	"github.com/sdimon13/cache/lib/cache"
 	"github.com/sdimon13/cache/lib/store"
 	"github.com/redis/go-redis/v9"
 )

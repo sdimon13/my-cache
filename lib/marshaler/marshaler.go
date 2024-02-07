@@ -3,8 +3,9 @@ package marshaler
 import (
 	"context"
 
-	"github.com/sdimon13/cache/lib/v1/cache"
 	"github.com/vmihailenco/msgpack/v5"
+
+	"github.com/sdimon13/cache/lib/cache"
 
 	"github.com/sdimon13/cache/lib/store"
 )
