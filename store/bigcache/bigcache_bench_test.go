@@ -8,7 +8,8 @@ import (
 	"time"
 
 	"github.com/allegro/bigcache/v3"
-	lib_store "github.com/sdimon13/cache/lib/v1/store"
+
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 func BenchmarkBigcacheSet(b *testing.B) {

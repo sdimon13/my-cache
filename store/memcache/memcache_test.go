@@ -8,7 +8,7 @@ import (
 
 	"github.com/bradfitz/gomemcache/memcache"
 	"github.com/golang/mock/gomock"
-	lib_store "github.com/sdimon13/cache/lib/v1/store"
+	lib_store "github.com/sdimon13/cache/lib/store"
 	"github.com/stretchr/testify/assert"
 )
 

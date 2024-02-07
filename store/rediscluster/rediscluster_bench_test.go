@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	redis "github.com/redis/go-redis/v9"
-	lib_store "github.com/sdimon13/cache/lib/v1/store"
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 // should be configured to connect to real Redis Cluster

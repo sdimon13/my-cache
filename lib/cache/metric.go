@@ -4,7 +4,8 @@ import (
 	"context"
 
 	"github.com/sdimon13/cache/lib/v1/metrics"
-	"github.com/sdimon13/cache/lib/v1/store"
+
+	"github.com/sdimon13/cache/lib/store"
 )
 
 const (

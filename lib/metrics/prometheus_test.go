@@ -7,9 +7,11 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/testutil"
-	"github.com/sdimon13/cache/lib/v1/codec"
-	"github.com/sdimon13/cache/lib/v1/store"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sdimon13/cache/lib/store"
+
+	"github.com/sdimon13/cache/lib/codec"
 )
 
 func TestNewPrometheus(t *testing.T) {

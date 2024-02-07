@@ -5,10 +5,11 @@ import (
 	"testing"
 	"time"
 
-	lib_store "github.com/sdimon13/cache/lib/v1/store"
-	"github.com/smartystreets/assertions/should"
+	"github.com/smarty/assertions/should"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/spf13/cast"
+
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 // run go test -run='TestPegasus*' -race -cover -coverprofile=coverage.txt -covermode=atomic -v ./...

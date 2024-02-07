@@ -8,8 +8,9 @@ import (
 
 	"github.com/golang/mock/gomock"
 	"github.com/patrickmn/go-cache"
-	lib_store "github.com/sdimon13/cache/lib/v1/store"
 	"github.com/stretchr/testify/assert"
+
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 func TestNewGoCache(t *testing.T) {

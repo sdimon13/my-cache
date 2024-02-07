@@ -9,8 +9,9 @@ import (
 	"github.com/redis/rueidis/mock"
 
 	"github.com/golang/mock/gomock"
-	lib_store "github.com/sdimon13/cache/lib/v1/store"
 	"github.com/stretchr/testify/assert"
+
+	lib_store "github.com/sdimon13/cache/lib/store"
 )
 
 func TestNewRueidis(t *testing.T) {

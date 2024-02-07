@@ -10,8 +10,8 @@ import (
 	time "time"
 
 	gomock "github.com/golang/mock/gomock"
-	codec "github.com/sdimon13/cache/lib/v1/codec"
-	store "github.com/sdimon13/cache/lib/v1/store"
+	codec "github.com/sdimon13/cache/lib/codec"
+	store "github.com/sdimon13/cache/lib/store"
 )
 
 // MockCacheInterface is a mock of CacheInterface interface.
