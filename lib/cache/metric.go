@@ -3,8 +3,7 @@ package cache
 import (
 	"context"
 
-	"cache/lib/metrics"
-
+	"github.com/sdimon13/my-cache/lib/metrics"
 	"github.com/sdimon13/my-cache/lib/store"
 )
 

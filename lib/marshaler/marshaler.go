@@ -5,7 +5,7 @@ import (
 
 	"github.com/vmihailenco/msgpack/v5"
 
-	"cache/lib/cache"
+	"github.com/sdimon13/my-cache/lib/cache"
 
 	"github.com/sdimon13/my-cache/lib/store"
 )

@@ -9,7 +9,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"cache/lib/metrics"
+	"github.com/sdimon13/my-cache/lib/metrics"
 
 	"github.com/sdimon13/my-cache/lib/store"
 
