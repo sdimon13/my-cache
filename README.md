@@ -44,7 +44,7 @@ Here is what it brings in detail:
 To begin working with the latest version of gocache, you can import the library in your project:
 
 ```go
-go get github.com/sdimon13/cache/lib/v4
+go get github.com/sdimon13/cache/lib/v1
 ```
 
 and then, import the store(s) you want to use between all available ones:
@@ -122,8 +122,8 @@ value := cacheManager.Get(ctx, "my-key")
 ```go
 import (
 	"github.com/dgraph-io/ristretto"
-	"github.com/sdimon13/cache/lib/v4/cache"
-	"github.com/sdimon13/cache/lib/v4/store"
+	"github.com/sdimon13/cache/lib/v1/cache"
+	"github.com/sdimon13/cache/lib/v1/store"
 	ristretto_store "github.com/sdimon13/cache/store/ristretto/v4"
 )
 ristrettoCache, err := ristretto.NewCache(&ristretto.Config{
@@ -448,8 +448,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/sdimon13/cache/lib/v4/cache"
-	"github.com/sdimon13/cache/lib/v4/store"
+	"github.com/sdimon13/cache/lib/v1/cache"
+	"github.com/sdimon13/cache/lib/v1/store"
 	"github.com/redis/go-redis/v9"
 )
 

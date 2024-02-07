@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	lib_store "github.com/sdimon13/cache/lib/v4/store"
+	lib_store "github.com/sdimon13/cache/lib/v1/store"
 	"github.com/smartystreets/assertions/should"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/spf13/cast"

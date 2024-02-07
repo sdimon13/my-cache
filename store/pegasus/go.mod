@@ -5,7 +5,7 @@ go 1.22
 
 require (
 	github.com/XiaoMi/pegasus-go-client v0.0.0-20220519103347-ba0e68465cd5
-	github.com/sdimon13/cache/lib/v4 v4.1.5
+	github.com/sdimon13/cache/lib/v1 v4.1.5
 	github.com/smartystreets/assertions v1.13.0
 	github.com/smartystreets/goconvey v1.7.2
 	github.com/spf13/cast v1.5.0
@@ -27,4 +27,4 @@ require (
 	k8s.io/apimachinery v0.0.0-20191123233150-4c4803ed55e3 // indirect
 )
 
-replace github.com/sdimon13/cache/lib/v4 => ../../lib/
+replace github.com/sdimon13/cache/lib/v1 => ../../lib/

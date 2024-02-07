@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/hazelcast/hazelcast-go-client"
-	lib_store "github.com/sdimon13/cache/lib/v4/store"
+	lib_store "github.com/sdimon13/cache/lib/v1/store"
 )
 
 func BenchmarkHazelcastSet(b *testing.B) {

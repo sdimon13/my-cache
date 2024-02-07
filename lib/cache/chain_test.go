@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-	"github.com/sdimon13/cache/lib/v4/codec"
-	"github.com/sdimon13/cache/lib/v4/store"
+	"github.com/sdimon13/cache/lib/v1/codec"
+	"github.com/sdimon13/cache/lib/v1/store"
 	"github.com/stretchr/testify/assert"
 )
 

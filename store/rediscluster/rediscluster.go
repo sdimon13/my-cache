@@ -6,7 +6,7 @@ import (
 	"time"
 
 	redis "github.com/redis/go-redis/v9"
-	lib_store "github.com/sdimon13/cache/lib/v4/store"
+	lib_store "github.com/sdimon13/cache/lib/v1/store"
 )
 
 // RedisClusterClientInterface represents a go-redis/redis clusclient

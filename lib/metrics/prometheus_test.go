@@ -7,8 +7,8 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/testutil"
-	"github.com/sdimon13/cache/lib/v4/codec"
-	"github.com/sdimon13/cache/lib/v4/store"
+	"github.com/sdimon13/cache/lib/v1/codec"
+	"github.com/sdimon13/cache/lib/v1/store"
 	"github.com/stretchr/testify/assert"
 )
 

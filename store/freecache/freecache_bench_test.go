@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/coocood/freecache"
-	lib_store "github.com/sdimon13/cache/lib/v4/store"
+	lib_store "github.com/sdimon13/cache/lib/v1/store"
 )
 
 func BenchmarkFreecacheSet(b *testing.B) {
