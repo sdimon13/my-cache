@@ -1,6 +1,6 @@
 module github.com/sdimon13/cache
 
-go 1.22.0
+go 1.22
 
 require (
 	github.com/XiaoMi/pegasus-go-client v0.0.0-20220519103347-ba0e68465cd5
